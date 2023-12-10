@@ -1,0 +1,69 @@
+@import '@/styles/color';
+@import '@/styles/media';
+@import '@/styles/spacing';
+@import '@/styles/type';
+
+.root {
+    display: grid;
+    justify-items: end;
+
+    @media only screen and (min-width: #{$media-tablet + 1}) {
+        grid-template-areas:
+            'figure'
+            'label';
+    }
+    @media only screen and (max-width: #{$media-tablet}) {
+        grid-template-areas: 'label figure';
+        grid-template-columns: 1fr 1fr;
+        column-gap: $spacing-4;
+        padding-top: $spacing-1;
+        padding-bottom: $spacing-1;
+        border-top: 1px solid $color-divider;
+    }
+}
+
+.label {
+    font: $type-body-medium;
+    font-weight: 400;
+    grid-area: label;
+    color: $color-secondary;
+
+    @media only screen and (max-width: #{$media-tablet}) {
+        justify-self: start;
+    }
+}
+
+.currency {
+    font: $type-heading-small;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: $spacing-0-5;
+}
+
+.amount {
+    grid-area: figure;
+    font: $type-heading-small;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    font-feature-settings: 'cv10', 'cv11', 'ss01', 'tnum';
+    white-space: nowrap;
+    width: auto;
+
+    &.emphasized {
+        font: $type-display-small;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+    }
+
+    &.neutral {
+        color: $color-accent;
+    }
+
+    &.positive {
+        color: $color-positive;
+    }
+
+    &.negative {
+        color: $color-negative;
+    }
+}

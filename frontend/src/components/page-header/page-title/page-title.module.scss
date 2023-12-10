@@ -1,0 +1,12 @@
+@import '@/styles/media';
+@import '@/styles/spacing';
+@import '@/styles/type';
+
+.root {
+    margin-bottom: $spacing-1;
+
+    @media only screen and (max-width: #{$media-desktop}) {
+        font: $type-display-medium;
+        font-weight: 700;
+    }
+}

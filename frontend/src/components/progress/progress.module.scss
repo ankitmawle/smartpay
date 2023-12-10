@@ -1,0 +1,34 @@
+@import '@/styles/color';
+@import '@/styles/spacing';
+@import '@/styles/type';
+
+.root {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4.5rem;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        'bar value'
+        'label .';
+    column-gap: $spacing-2;
+    row-gap: $spacing-1;
+}
+
+.bar {
+    grid-area: bar;
+    align-self: center;
+}
+
+.label {
+    font: $type-body-medium;
+    line-height: 1.2;
+    font-weight: 400;
+    grid-area: label;
+    color: $color-secondary;
+}
+
+.value {
+    font: $type-heading-large;
+    line-height: 0.5rem;
+    grid-area: value;
+}

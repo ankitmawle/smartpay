@@ -1,0 +1,21 @@
+// Dictionary
+$spacing-module: 0.5rem;
+
+$spacing-0-25: calc($spacing-module / 4); //2px
+$spacing-0-5: calc($spacing-module / 2); //4px
+$spacing-1: $spacing-module; //8px
+$spacing-1-5: calc($spacing-module * 1.5); //12px
+$spacing-2: calc($spacing-module * 2); //16px
+$spacing-2-5: calc($spacing-module * 2.5); //20px
+$spacing-3: calc($spacing-module * 3); //24px
+$spacing-4: calc($spacing-module * 4); //32px
+$spacing-5: calc($spacing-module * 5); //40px
+$spacing-6: calc($spacing-module * 6); //48px
+$spacing-7: calc($spacing-module * 7); //56px
+$spacing-8: calc($spacing-module * 8); //64px
+$spacing-9: calc($spacing-module * 9); //72px
+$spacing-10: calc($spacing-module * 10); //80px
+
+// Semantic
+$spacing-page-block: $spacing-4;
+$spacing-page-inline: $spacing-6;

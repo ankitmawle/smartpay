@@ -1,0 +1,53 @@
+@import '@/styles/media';
+@import '@/styles/spacing';
+
+.root {
+    height: 100%;
+}
+
+.header {
+    margin-bottom: $spacing-6;
+}
+
+.dashboardGrid {
+    display: grid;
+
+    @media only screen and (min-width: #{$media-wide-desktop + 1}) {
+        grid-template-columns: minmax(38rem, 1fr) auto;
+        column-gap: $spacing-4;
+    }
+
+    @media only screen and (max-width: #{$media-wide-desktop}) {
+        row-gap: $spacing-5;
+    }
+}
+
+.mainColumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-2-5;
+}
+
+.secondaryColumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-5;
+
+    @media only screen and (min-width: #{$media-wide-desktop + 1}) {
+        width: 30rem;
+    }
+
+    & .userActionsSection {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: $spacing-2;
+
+        @media only screen and (min-width: #{$media-wide-desktop + 1}) {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        @media only screen and (max-width: #{$media-wide-desktop}) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

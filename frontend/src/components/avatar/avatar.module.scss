@@ -1,0 +1,22 @@
+@import '@/styles/color';
+@import '@/styles/radius';
+
+.root {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $radius-pill;
+    background-color: $color-divider;
+    font-weight: 600;
+}
+
+.profilePic {
+    background-position: center;
+    background-size: cover;
+}
+
+.initials {
+    text-transform: uppercase;
+}

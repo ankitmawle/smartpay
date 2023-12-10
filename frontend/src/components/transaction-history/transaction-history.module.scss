@@ -1,0 +1,39 @@
+@import './transaction-history-common';
+@import '@/styles/color';
+@import '@/styles/media';
+@import '@/styles/spacing';
+
+.legend {
+    @media only screen and (min-width: #{$media-tablet + 1}) {
+        @include transaction-list-grid;
+        padding-bottom: $spacing-1;
+        color: $color-secondary;
+        font-weight: 500;
+    }
+    @media only screen and (max-width: #{$media-tablet}) {
+        display: none;
+    }
+}
+
+.reciever {
+    grid-area: reciever;
+}
+
+.type {
+    grid-area: type;
+}
+
+.date {
+    grid-area: date;
+}
+
+.amount {
+    grid-area: amount;
+    text-align: right;
+}
+
+.transactionList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

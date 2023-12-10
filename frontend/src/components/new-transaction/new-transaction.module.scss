@@ -1,0 +1,40 @@
+@import '@/styles/spacing';
+@import '@/styles/type';
+
+.destinations {
+    display: grid;
+    width: fit-content;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: $spacing-1-5;
+    align-items: start;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: $spacing-1;
+}
+
+.userName {
+    font: $type-body-small;
+    line-height: 1rem;
+}
+
+.profilePic {
+    opacity: 80%;
+}
+
+.addUser {
+    display: grid;
+    grid-template-rows: 40px min-content;
+    row-gap: $spacing-1;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+.addButton {
+    width: 1.75rem;
+}

@@ -1,0 +1,41 @@
+@import '@/styles/color';
+@import '@/styles/radius';
+@import '@/styles/spacing';
+
+.root {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: $radius-pill;
+    outline: none;
+    background-color: transparent;
+    text-decoration: none;
+    appearance: none;
+    cursor: pointer;
+
+    background-color: $color-upgrade;
+    color: $color-primary;
+    line-height: 0;
+
+    &.small {
+        padding-top: $spacing-0-5;
+        padding-bottom: $spacing-0-5;
+        padding-left: $spacing-0-5;
+        padding-right: $spacing-0-5;
+    }
+
+    &.medium {
+        padding-top: $spacing-1;
+        padding-bottom: $spacing-1;
+        padding-left: $spacing-1;
+        padding-right: $spacing-1;
+    }
+
+    &:focus-visible {
+        outline: $color-accent auto 1px;
+        outline: activeborder auto 1px;
+        outline: -moz-mac-focusring auto 1px;
+        outline: -webkit-focus-ring-color auto 1px;
+    }
+}

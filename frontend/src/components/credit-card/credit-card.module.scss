@@ -1,0 +1,62 @@
+@import '@/styles/color';
+@import '@/styles/radius';
+@import '@/styles/spacing';
+@import '@/styles/type';
+
+.root {
+    //Credit card ratio
+    aspect-ratio: 320/206;
+
+    width: 100%;
+    max-width: 320px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas:
+        'logo logo logo'
+        'cardNumber cardNumber cardNumber'
+        'cardHolder expireDate .';
+    column-gap: $spacing-2;
+    row-gap: $spacing-1;
+    padding: $spacing-2-5;
+    border-radius: $radius-xxx-large;
+    background-color: #197bbd;
+    background-image: url('https://static.wixstatic.com/shapes/610b66_69366bd4c21f42efb891bb01a462296b.svg'),
+        linear-gradient(#197bbd, #3391d0); // cloud.svg (320x206)
+    background-size: cover;
+    color: $color-white;
+    box-shadow: 0 8px 12px -8px rgb(64 64 64 / 50%),
+        0 2px 4px -2px rgb(64 64 64 / 10%);
+}
+
+.cardLogo {
+    font: $type-body-large;
+    font-weight: 600;
+    grid-area: logo;
+}
+
+.cardNumber {
+    font: $type-heading-medium;
+    font-feature-settings: 'cv10', 'cv11', 'ss01';
+    font-weight: 500;
+
+    grid-area: cardNumber;
+    align-self: center;
+}
+
+.cardFooterItemLabel {
+    font: $type-body-micro;
+}
+
+.cardFooterItemValue {
+    font: $type-body-small;
+    font-weight: 500;
+}
+
+.cardHolder {
+    grid-area: cardHolder;
+}
+
+.expireDate {
+    grid-area: expireDate;
+}

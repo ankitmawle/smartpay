@@ -1,0 +1,37 @@
+@import '@/styles/color';
+@import '@/styles/radius';
+@import '@/styles/spacing';
+@import '@/styles/type';
+
+.root > a {
+    display: block;
+    height: 100%;
+    padding-top: $spacing-1-5;
+    padding-bottom: $spacing-1-5;
+    padding-left: $spacing-3;
+    padding-right: $spacing-3;
+    border-radius: $radius-card;
+    background-color: $color-background;
+    box-shadow: 0px 16px 24px rgba($color-black, 0.06),
+        0px 2px 6px rgba($color-black, 0.04),
+        0px 0px 1px rgba($color-black, 0.04);
+}
+
+.title {
+    font: $type-heading-medium;
+    font-weight: 400;
+}
+
+.amount {
+    font: $type-heading-medium;
+    font-weight: 500;
+}
+
+.date {
+    font: $type-body-medium;
+    color: $color-secondary;
+}
+
+.illustration {
+    margin-top: $spacing-4;
+}

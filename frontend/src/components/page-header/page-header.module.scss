@@ -1,0 +1,62 @@
+@import '@/styles/color';
+@import '@/styles/media';
+@import '@/styles/radius';
+@import '@/styles/spacing';
+@import '@/styles/type';
+
+.root {
+    display: grid;
+    column-gap: $spacing-5;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+}
+
+.utilities {
+    @media only screen and (min-width: #{$media-tablet + 1}) {
+        display: flex;
+        align-items: center;
+        margin-top: $spacing-1;
+        column-gap: $spacing-3;
+    }
+
+    @media only screen and (max-width: #{$media-tablet}) {
+        display: none;
+    }
+}
+
+.actionsSection {
+    color: $color-secondary;
+    display: flex;
+    column-gap: $spacing-0-5;
+    align-items: center;
+}
+
+.userSection {
+    display: flex;
+    align-items: center;
+    column-gap: $spacing-1-5;
+}
+
+.avatar {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: $radius-pill;
+    background: $color-accent
+        url('https://static.wixstatic.com/shapes/610b66_b4d73c785beb4b1daddded7d0cd17bb7.svg')
+        no-repeat center; // avatar-default.svg (36x36)
+    background-color: $color-accent;
+    background-size: cover;
+}
+
+.userDetails {
+    font: $type-body-medium;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-0-25;
+    line-height: 1rem;
+}
+
+.userAccountType {
+    color: $color-secondary;
+}

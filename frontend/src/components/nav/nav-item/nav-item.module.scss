@@ -1,0 +1,33 @@
+@import '@/styles/color';
+@import '@/styles/spacing';
+@import '@/styles/radius';
+
+.root {
+    padding-top: $spacing-1;
+    padding-bottom: $spacing-1;
+    padding-left: $spacing-1-5;
+    padding-right: $spacing-1-5;
+    border-radius: $radius-small;
+    color: $color-secondary;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-lightest-blue;
+        color: $color-accent;
+    }
+
+    &:focus-visible {
+        outline: none;
+        background-color: $color-focus;
+        color: $color-background;
+    }
+
+    display: flex;
+    column-gap: $spacing-2;
+}
+
+.selected {
+    background-color: $color-lightest-blue;
+    color: $color-accent;
+}

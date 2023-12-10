@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'type';
+@import 'color';
+
+html,
+body {
+    font: $type-body-medium;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-feature-settings: 'cv10', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $color-primary;
+    width:100vw;
+    
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+html {
+    font-size: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+// Reset box-sizing
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+// Reset headings and paragraph
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1 {
+    font: $type-display-large;
+    font-weight: 700;
+}
+
+h2 {
+    font: $type-display-medium;
+    font-weight: 700;
+}
+
+h3 {
+    font: $type-display-small;
+    font-weight: 700;
+}
+
+h4 {
+    font: $type-heading-large;
+    font-weight: 600;
+}
+
+h5 {
+    font: $type-heading-medium;
+    font-weight: 600;
+}
+
+h6 {
+    font: $type-heading-small;
+    font-weight: 600;
+}

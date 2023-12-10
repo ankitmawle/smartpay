@@ -1,0 +1,30 @@
+@import '@/styles/spacing';
+@import '@/styles/media';
+
+.root {
+    min-height: 100%;
+
+    @media only screen and (min-width: #{$media-mobile + 1}) {
+        display: grid;
+        grid-template-columns: 20rem 1fr;
+    }
+}
+
+
+.sidebar >a{
+    @media only screen and (min-width: #{$media-mobile}) {
+        display: none;
+    }
+}
+.menuIcon{
+    @media only screen and (min-width: #{$media-mobile}) {
+        display: none;
+    }
+}
+
+.pageContent {
+    padding-top: $spacing-page-block;
+    padding-bottom: $spacing-page-block;
+    padding-left: $spacing-page-inline;
+    padding-right: $spacing-page-inline;
+}

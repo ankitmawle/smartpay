@@ -1,0 +1,61 @@
+@import '../transaction-history-common';
+@import '@/styles/color';
+@import '@/styles/media';
+@import '@/styles/radius';
+@import '@/styles/spacing';
+
+.root {
+    @include transaction-list-grid;
+    padding-top: $spacing-1-5;
+    padding-bottom: $spacing-1-5;
+
+    &:not(:last-child) {
+        box-shadow: 0 -1px 0 0 $color-divider inset;
+    }
+
+    &:last-child {
+        margin-bottom: calc(-1 * $spacing-1-5);
+    }
+}
+
+.receiver {
+    grid-area: receiver;
+    display: flex;
+    align-items: flex-start;
+    column-gap: $spacing-2;
+
+    & .icon {
+        flex-shrink: 0;
+        width: $spacing-3;
+        padding: $spacing-0-5;
+        border-radius: $radius-small;
+        background-color: $color-divider;
+        color: $color-primary;
+    }
+}
+
+// See how WCS handles changes when combining definitions
+.type,
+.date {
+    color: $color-secondary;
+
+    @media only screen and (max-width: #{$media-tablet}) {
+        margin-left: $spacing-5;
+    }
+}
+
+.type {
+    grid-area: type;
+}
+
+.date {
+    grid-area: date;
+}
+
+.amount {
+    grid-area: amount;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    text-align: right;
+    font-feature-settings: 'cv10', 'cv11', 'ss01', 'tnum';
+}

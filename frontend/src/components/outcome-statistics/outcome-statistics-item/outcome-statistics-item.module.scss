@@ -1,0 +1,50 @@
+@import '@/styles/color';
+@import '@/styles/radius';
+@import '@/styles/spacing';
+@import '@/styles/type';
+
+.root {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: $spacing-2;
+    align-items: center;
+}
+
+.illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    background-color: $color-divider;
+    border-radius: $radius-small;
+    box-shadow: 0px 16px 24px rgba($color-black, 0.1),
+        0px 4px 4px -4px rgba($color-black, 0.1);
+
+    &.shopping {
+        background-color: #ffeada;
+        color: #f8964c;
+    }
+
+    &.electronics {
+        background-color: #ddf9e4;
+        color: #22a447;
+    }
+
+    &.travel {
+        background-color: #e4f0ff;
+        color: #70a6e8;
+    }
+}
+
+.shoppingProgressFill {
+    background: linear-gradient(90deg, #f79042, #fcae73);
+}
+
+.electronicsProgressFill {
+    background: linear-gradient(90deg, #209d43, #2bc255);
+}
+
+.travelProgressFill {
+    background: #70a6e8;
+}

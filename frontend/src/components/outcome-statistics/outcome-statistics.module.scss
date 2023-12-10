@@ -1,0 +1,22 @@
+@import '@/styles/type';
+@import '@/styles/spacing';
+
+.root {
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-2;
+}
+
+.title {
+    font: $type-heading-medium;
+    font-weight: 600;
+}
+
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-3;
+}

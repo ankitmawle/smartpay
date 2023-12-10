@@ -1,0 +1,34 @@
+@import '@/styles/color';
+@import '@/styles/radius';
+@import '@/styles/spacing';
+@import '@/styles/type';
+
+.root {
+    font: $type-heading-medium;
+    line-height: 1.2;
+    font-weight: 600;
+
+    display: flex;
+    align-items: flex-end;
+    padding-top: $spacing-1-5;
+    padding-bottom: $spacing-1-5;
+    padding-left: $spacing-1-5;
+    padding-right: $spacing-1-5;
+    border-radius: $radius-card;
+    color: $color-white;
+    background-color: #ed654c;
+    background-image: url('https://static.wixstatic.com/shapes/610b66_1064e622dfac403e89c5dfe1697bbf99.svg'),
+        linear-gradient(#ed654c, #d05842); // maroon-clouds.svg (157x183)
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    box-shadow: 0px 16px 24px rgba($color-black, 0.06),
+        0px 2px 6px rgba($color-black, 0.04),
+        0px 0px 1px rgba($color-black, 0.04);
+}
+
+.icon {
+    position: relative;
+    top: calc($spacing-0-25 + $spacing-0-5);
+}
