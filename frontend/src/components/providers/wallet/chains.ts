@@ -21,14 +21,14 @@ const hardhat: Chain = {
 }
 
 export const supportedChains = [
-    hardhat,
-    linea,
-    celoAlfajores,
-    mantleTestnet,
-    arbitrumGoerli,
-    base,
-    scroll,
-    zetachainAthensTestnet,
+    //hardhat,
+    //linea,
+    //celoAlfajores,
+    //mantleTestnet,
+    //arbitrumGoerli,
+    //base,
+    //scroll,
+    //zetachainAthensTestnet,
     polygonMumbai,
-    polygonZkEvmTestnet
+    //polygonZkEvmTestnet
 ]

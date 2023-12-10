@@ -2,7 +2,7 @@ import { ethers } from "hardhat";
 
 async function main() {
   // Deploy all contracts
-  const wallContract = await ethers.deployContract("Wall");
+  const wallContract = await ethers.deployContract("Smartpay");
   await wallContract.waitForDeployment();
 }
 

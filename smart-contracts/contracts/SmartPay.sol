@@ -1,14 +1,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "./SmartPayAccount.sol";
-contract SmartPay {
+import "./Smartpayaccount.sol";
+
+contract Smartpay {
     // Structs
     
     mapping(address => address) public smartAccounts;
     mapping(string => address) public emailAccounts;
     mapping(address => bool ) public accountExistance;
-    SmartPayAccount public _smartPayAccount;     
+    Smartpayaccount public _smartPayAccount;     
     // Events
     event SmartPayWalletCreated(address creator, address smartAccountAddress, string linkedEmailAddress );
 
@@ -19,7 +20,7 @@ contract SmartPay {
      * @param _email email to be associated with the account 
      */
     function createSmartPayWallet(string memory _email) external{
-        _smartPayAccount= new SmartPayAccount(msg.sender,_email,address(this));
+        _smartPayAccount= new Smartpayaccount(msg.sender,_email,address(this));
         address newAddress =address(_smartPayAccount);
         accountExistance[newAddress]=true;
         smartAccounts[msg.sender] =newAddress;

@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 pragma experimental ABIEncoderV2;
-import "./SmartPay.sol";
+import "./Smartpay.sol";
 //import "@openzeppelin/contracts/utils/Counters.sol";
 // import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./IERC20.sol";
 import "./Counters.sol";
-contract SmartPayAccount {
+contract Smartpayaccount {
     // Structs
     struct Transaction{
         uint256 _transactionId;
@@ -42,13 +42,13 @@ contract SmartPayAccount {
      */
     function sendERC20(address receiver, address tokenAddress,uint256 amount, uint256 transactionId )external{
         require(msg.sender==ownerWallet,"Access Denied");
-        SmartPay smartPay= SmartPay(smartPayAddress);
+        Smartpay smartPay= SmartPay(smartPayAddress);
         IERC20 token= IERC20(tokenAddress);
         address selfAddress=address(this);
         uint256 allowance=token.allowance(ownerWallet,selfAddress);
         require(allowance>=amount, "please increase allowance");
         if(smartPay.accountExistance(receiver)){
-            SmartPayAccount receiverContract= SmartPayAccount(receiver);
+            Smartpayaccount receiverContract= Smartpayaccount(receiver);
             if(transactionId!=0){
                 bool _Tstatus;
                 (,,_Tstatus,)=receiverContract.transactions(transactionId);
@@ -66,7 +66,7 @@ contract SmartPayAccount {
 
     function transferReceived( address from, address tokenAddress, uint256 amount, uint256 transactionId) public{
             
-        SmartPay smartPay= SmartPay(smartPayAddress);
+        Smartpay smartPay= Smartpay(smartPayAddress);
         require(smartPay.accountExistance(from));
         if(transactionId!=0){
             Transaction memory newTransaction = Transaction(
