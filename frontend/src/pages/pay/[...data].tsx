@@ -47,9 +47,9 @@ export default function Page() {
             console.error(e);
             setError("Failed to create wallet");
         } finally {
-            setIsSending(false);
+            
         }
-    }
+    }}
   const router = useRouter()
   return (<><p>Sending total amount of {router.query.slug[2]} token with id {router.query.slug[1]} to user {router.query.slug[0]} </p>
   <br/> <button onClick={send}>Please Click here to initaite the transaction</button></>)
